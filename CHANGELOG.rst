@@ -1,5 +1,24 @@
 Changelog
 =========
+v0.3.0
+------
+Added
+~~~~~
+- Adds CentOS 5 support
+- Adds CentOS 6 support
+
+Changed
+~~~~~~~
+- README converted to Markdown (for Docker Hub integration)
+
+Removed
+~~~~~~~
+Nothing
+
+Fixed
+~~~~~
+Nothing
+
 v0.2.0
 ------
 Added
