@@ -12,3 +12,5 @@ RUN yum install -y auto{conf,make} ctags elfutils gcc{,-c++} gettext intltool li
     yum clean all
 
 RUN mkdir -p ~/rpmbuild/{BUILD,RPMS,SOURCES,SRPMS,SPECS}
+
+CMD ["bash"]
