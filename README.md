@@ -22,3 +22,9 @@ You can add a build script like the following:
     yum-builddep ${srpms}/${package}*.src.rpm -y
     # Rebuild
     rpmbuild --rebuild ${srpms}/${package}*.src.rpm
+
+There are containers for CentOS 5, 6 and 7.
+
+    docker pull gvangool/rpmbuilder:centos5
+    docker pull gvangool/rpmbuilder:centos6
+    docker pull gvangool/rpmbuilder:centos7
