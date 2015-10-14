@@ -1,0 +1,18 @@
+#!/bin/bash
+package=$1
+sources=~/rpmbuild/SOURCES
+specs=~/rpmbuild/SPECS
+srpms=~/rpmbuild/SRPMS
+package_dir=/data
+
+cp ${package_dir}/* ${sources}
+cp ${package_dir}/*spec ${specs}
+# Download sources
+cd ${specs}
+spectool -g -R ${package}.spec
+# Build SRPM
+srpm=$(rpmbuild -bs ${package}.spec | cut -f "2" -d ":")
+# Build dependencies
+yum-builddep ${srpm} -y
+# Rebuild
+rpmbuild --rebuild ${srpm}
