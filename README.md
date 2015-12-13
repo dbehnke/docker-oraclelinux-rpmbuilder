@@ -1,5 +1,7 @@
-CentOS 7 RPM builder
-====================
+Oracle Linux 7 RPM builder
+==========================
+This is a fork of gvangool/docker-rpmbuild adapted for Oracle Linux
+
 This is a base image for build RPM packages. It *should* contain all the
 required tools to get started.
 
@@ -23,8 +25,8 @@ You can add a build script like the following:
     # Rebuild
     rpmbuild --rebuild ${srpms}/${package}*.src.rpm
 
-There are containers for CentOS 5, 6 and 7.
+There are containers for Oracle Linux 5, 6 and 7.
 
-    docker pull gvangool/rpmbuilder:centos5
-    docker pull gvangool/rpmbuilder:centos6
-    docker pull gvangool/rpmbuilder:centos7
+    docker pull dbehnke/rpmbuilder:ol5
+    docker pull dbehnke/rpmbuilder:ol6
+    docker pull dbehnke/rpmbuilder:ol7
