@@ -1,8 +1,11 @@
-FROM centos:centos6
+FROM oraclelinux:6
+
+# Install EPEL repo
+RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm && \
+    yum clean all
 
 # Base install up-to-date and epel is required for many packages
 RUN yum update -y && \
-    yum install -y epel-release && \
     yum clean all
 
 # Software development tools, RPM build requirements
